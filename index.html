@@ -7,9 +7,11 @@
     <title>Shopper</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <script>
+    
+    
+    <script type="text/javascript">
         function LoadCategories(){
-            fetch("https://fakestoreapi.com/products/categories")
+            fetch("http://fakestoreapi.com/products/categories")
             .then(function(res){
                 return res.json();
             })
@@ -68,7 +70,7 @@
             if(categoryName=="all"){
                 LoadProducts(`http://fakestoreapi.com/products`);
             } else {
-                LoadProducts(`http://fakestoreapi.com/products/category/${categoryName}`);
+                LoadProducts(`https://fakestoreapi.com/products/category/${categoryName}`);
             }
         }
         var cartItems = [];
@@ -106,8 +108,6 @@
             }
         }
     </script>
-    
-    
 </head>
 
     <body class="container-fluid" onload="bodyload()">
